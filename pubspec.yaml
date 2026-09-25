@@ -1,0 +1,48 @@
+name: rupesh_portfolio
+description: Senior Flutter Developer portfolio of Rupesh Rajak, built with Flutter Web and Firebase.
+publish_to: 'none'
+version: 2.0.0+2
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.1
+  flutter_animate: ^4.5.2
+  animated_text_kit: ^4.2.3
+  visibility_detector: ^0.4.0+2
+  font_awesome_flutter: ^11.0.0
+  firebase_core: ^3.13.0
+  cloud_firestore: ^5.6.7
+  firebase_analytics: ^11.4.5
+  provider: ^6.1.2
+  flutter_web_plugins:
+    sdk: flutter
+  responsive_framework: ^1.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/docs/
+    - assets/images/screens/aspirant_league/
+    - assets/images/screens/delivery/
+    - assets/images/screens/fastpeer_ai/
+    - assets/images/screens/fastpeer_business/
+    - assets/images/screens/fitness/
+    - assets/images/screens/leadtracker/
+    - assets/images/screens/octavehi/
+    - assets/images/screens/room_radar/
+    - assets/images/screens/societydesk/
+    - assets/images/screens/spa_salon/
+    - assets/images/screens/tours/
+    - assets/images/screens/vizzhy/

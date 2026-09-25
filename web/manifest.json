@@ -1,0 +1,17 @@
+{
+  "name": "Rupesh Rajak · Senior Flutter Developer",
+  "short_name": "Rupesh Rajak",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#07080D",
+  "theme_color": "#6C63FF",
+  "description": "Portfolio of Rupesh Rajak, Senior Flutter Developer.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/Icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/Icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/Icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
