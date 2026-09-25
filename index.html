@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/rupesh_portfolio/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rupesh Rajak · Senior Flutter Developer with 3.5+ years building production Android, iOS and Web apps across CRM, healthcare, fintech and EdTech. Native VoIP, IoT, Odoo ERP and Firebase specialist.">
+  <meta name="keywords" content="Rupesh Rajak, Flutter Developer, Senior Flutter Developer, Flutter Web, Firebase, Dart, Mobile App Developer India, Odoo, Twilio, CallKit">
+  <meta name="author" content="Rupesh Rajak">
+  <meta name="theme-color" content="#07080D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rupesh Rajak · Senior Flutter Developer">
+  <meta property="og:description" content="Portfolio of Rupesh Rajak, Senior Flutter Developer. Production apps, native integrations and open-source work.">
+  <meta property="og:url" content="https://rupeshflutter.web.app/">
+  <meta property="og:image" content="https://rupeshflutter.web.app/icons/Icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Rupesh Rajak">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="manifest" href="manifest.json">
+  <title>Rupesh Rajak · Senior Flutter Developer</title>
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #07080D; height: 100%; overflow: hidden; }
+    #splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 22px;
+      background: #07080D; z-index: 9999;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      transition: opacity .5s ease;
+    }
+    #splash .logo {
+      width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+      background: linear-gradient(135deg, #6C63FF, #00D4FF); color: #fff; font-weight: 800; font-size: 30px;
+      box-shadow: 0 0 40px rgba(108,99,255,.55);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    #splash .bar { width: 160px; height: 3px; background: #1a1d2b; border-radius: 3px; overflow: hidden; }
+    #splash .bar::after {
+      content: ""; display: block; height: 100%; width: 40%;
+      background: linear-gradient(90deg, #6C63FF, #00D4FF, #FF6BCB);
+      animation: slide 1.2s ease-in-out infinite;
+    }
+    #splash p { color: #6B7085; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+    @keyframes pulse { 0%,100% { transform: scale(1);} 50% { transform: scale(1.08);} }
+    @keyframes slide { 0% { transform: translateX(-100%);} 100% { transform: translateX(400%);} }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <div class="logo">R</div>
+    <div class="bar"></div>
+    <p>Rupesh Rajak</p>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('splash');
+      if (!s) return;
+      s.style.opacity = '0';
+      setTimeout(function () { s.remove(); document.body.style.overflow = ''; }, 500);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
