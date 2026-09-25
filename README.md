@@ -1,7 +1,8 @@
 # Rupesh Rajak · Portfolio
 
 Senior Flutter Developer portfolio built with **Flutter Web** and **Firebase**.
-Live: https://rupeshflutter.web.app
+Live (GitHub Pages): https://rupeshrajak0285.github.io/rupesh_portfolio/  
+Firebase Hosting target: https://rupeshflutter.web.app (deploy with `./deploy.sh` from the Firebase account that owns the project)
 
 ## Features
 - Fully responsive (mobile / tablet / desktop) with a single codebase
@@ -34,4 +35,9 @@ That regenerates `lib/services/firebase_options.dart` with real keys. Then enabl
 ```bash
 flutter run -d chrome
 ./deploy.sh
+```
+
+## Deploy to GitHub Pages
+```bash
+./deploy_pages.sh
 ```
