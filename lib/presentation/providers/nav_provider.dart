@@ -53,6 +53,22 @@ class NavProvider extends ChangeNotifier {
       _progress = progress;
       notifyListeners();
     }
+    if (!_animating) _updateActiveFromOffsets();
+  }
+
+  bool _animating = false;
+
+  /// Picks the last section whose top edge has passed the nav bar.
+  void _updateActiveFromOffsets() {
+    NavSection? current;
+    for (final s in NavSection.values) {
+      final ctx = keys[s]?.currentContext;
+      final box = ctx?.findRenderObject() as RenderBox?;
+      if (box == null || !box.attached) continue;
+      final top = box.localToGlobal(Offset.zero).dy;
+      if (top <= 140) current = s;
+    }
+    if (current != null) setActive(current);
   }
 
   void setActive(NavSection section) {
@@ -65,12 +81,14 @@ class NavProvider extends ChangeNotifier {
     final ctx = keys[section]?.currentContext;
     if (ctx == null) return;
     setActive(section);
+    _animating = true;
     await Scrollable.ensureVisible(
       ctx,
       duration: const Duration(milliseconds: 700),
       curve: Curves.easeInOutCubic,
       alignment: 0,
     );
+    _animating = false;
   }
 
   @override

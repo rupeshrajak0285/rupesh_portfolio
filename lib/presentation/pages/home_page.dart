@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../providers/nav_provider.dart';
@@ -36,15 +35,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final nav = context.read<NavProvider>();
 
-    Widget tracked(NavSection section, Widget child) {
-      return VisibilityDetector(
-        key: ValueKey('section_${section.name}'),
-        onVisibilityChanged: (info) {
-          if (info.visibleFraction > .35) nav.setActive(section);
-        },
-        child: child,
-      );
-    }
+    Widget tracked(NavSection section, Widget child) => child;
 
     return Scaffold(
       key: _scaffoldKey,
