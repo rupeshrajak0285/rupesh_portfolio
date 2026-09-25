@@ -44,7 +44,7 @@ class PortfolioData {
 
   static const List<Stat> stats = [
     Stat(value: 3.5, suffix: '+', label: 'Years Experience'),
-    Stat(value: 14, suffix: '+', label: 'Apps Built'),
+    Stat(value: 17, suffix: '+', label: 'Apps Built'),
     Stat(value: 3, suffix: '', label: 'Industries'),
     Stat(value: 1, suffix: '', label: 'pub.dev Package'),
   ];
@@ -227,6 +227,8 @@ class PortfolioData {
       tech: ['Flutter', 'Odoo 18', 'Twilio', 'CallKit', 'PushKit', 'FCM'],
       platforms: [ProjectPlatform.android, ProjectPlatform.ios],
       accent: AppColors.primary,
+      icon: 'assets/images/screens/chivalry/icon.png',
+      screenshots: ['assets/images/screens/chivalry/s1.png', 'assets/images/screens/chivalry/s2.png', 'assets/images/screens/chivalry/s3.png', 'assets/images/screens/chivalry/s4.png', 'assets/images/screens/chivalry/s5.png', 'assets/images/screens/chivalry/s6.png'],
       featured: true,
     ),
     Project(
@@ -447,6 +449,56 @@ class PortfolioData {
       accent: AppColors.pink,
       icon: 'assets/images/screens/spa_salon/icon.png',
       inProgress: true,
+    ),
+    Project(
+      title: 'Pragtech Healthcare',
+      category: 'Healthcare · Odoo',
+      tagline: 'Patient and doctor portals for appointments, labs and imaging.',
+      description:
+          'Healthcare management app on an Odoo backend with a patient portal (book appointments, lab tests, imaging, prescriptions, invoices, records) and a doctor portal (schedule slots, appointments, lab and imaging reviews, profile). Push notifications delivered through a custom Odoo addon and Firebase Cloud Messaging.',
+      features: [
+        'Patient & doctor shells with role-based navigation',
+        'Appointment booking with slot management',
+        'Lab tests, imaging & prescriptions',
+        'Invoices and medical records',
+        'FCM push via custom Odoo addon',
+      ],
+      tech: ['Flutter', 'Odoo', 'Firebase', 'FCM', 'REST'],
+      platforms: [ProjectPlatform.android, ProjectPlatform.ios],
+      accent: AppColors.success,
+    ),
+    Project(
+      title: 'ACGS Webshop',
+      category: 'E-commerce · Odoo',
+      tagline: 'Odoo-powered mobile shop for All Creatures Great & Small, Inc.',
+      description:
+          'E-commerce mobile app connected to an Odoo webshop: product catalogue and search, favourites, cart, multiple addresses and delivery methods, Apple Pay / Google Pay / card payments, order history and force-update handling.',
+      features: [
+        'Product catalogue, search & favourites',
+        'Cart, addresses & delivery methods',
+        'Apple Pay, Google Pay & card payments',
+        'Order history & detail pages',
+        'Push messaging & force-update service',
+      ],
+      tech: ['Flutter', 'Odoo', 'Payments', 'FCM', 'WebView'],
+      platforms: [ProjectPlatform.android, ProjectPlatform.ios],
+      accent: AppColors.warning,
+    ),
+    Project(
+      title: 'twilio_voice_kit',
+      category: 'Plugin · Native',
+      tagline: 'Flutter plugin wrapping the Twilio Voice SDK on Android and iOS.',
+      description:
+          'Internal Flutter plugin that powers VoIP calling in Chivalry CRM: outbound dialer, incoming calls with CallKit on iOS and full-screen notifications on Android, PushKit / FCM call delivery and audio routing, exposed to Dart through Method and Event Channels.',
+      features: [
+        'Method & Event Channels API',
+        'CallKit (iOS) and ConnectionService-style UI (Android)',
+        'PushKit / FCM incoming-call delivery',
+        'Custom ProGuard rules for R8 release builds',
+      ],
+      tech: ['Dart', 'Kotlin', 'Swift', 'Twilio Voice', 'CallKit', 'PushKit'],
+      platforms: [ProjectPlatform.package],
+      accent: AppColors.pink,
     ),
     Project(
       title: 'json_form_engine',

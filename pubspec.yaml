@@ -35,6 +35,7 @@ flutter:
     - assets/images/
     - assets/docs/
     - assets/images/screens/aspirant_league/
+    - assets/images/screens/chivalry/
     - assets/images/screens/delivery/
     - assets/images/screens/fastpeer_ai/
     - assets/images/screens/fastpeer_business/
